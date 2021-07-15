@@ -1,11 +1,18 @@
 import getSymbolFromCurrency from "currency-symbol-map";
-import { Fragment } from "react";
+import { useHistory } from 'react-router';
+
 
 const Order = ({ order }) => {
+  const history = useHistory();
   const orderItems = JSON.parse(order.products);
   const orderDate = new Date(order.createdAt);
   return (
-    <div className="my-10">
+    <div className="my-10" onClick={() => {
+      history.push({
+        pathname: "/order",
+        state: order
+      })
+    }}>
       <div className="bg-gray-100 rounded-md grid grid-cols-8 text-xs px-3 py-4 text-gray-500 border">
         <div className="col-span-2">
           <p>ORDER PLACED</p>

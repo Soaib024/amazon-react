@@ -43,19 +43,19 @@ const ASide = () => {
       </div>
       <div className="sidebar_container pt-10">
         <p className="sidebar_conatiner_heading ">Trending</p>
-        <p className="link sidebar_container_link">Best Seller</p>
-        <p className="link sidebar_container_link">New Releases</p>
-        <p className="link sidebar_container_link">Movers and Shakers</p>
+        <p className="sidebar_container_link">Best Seller</p>
+        <p className="sidebar_container_link">New Releases</p>
+        <p className="sidebar_container_link">Movers and Shakers</p>
       </div>
 
       <div className="sidebar_container">
         <p className="sidebar_conatiner_heading">Digital Content And Devices</p>
-        <p className="link sidebar_container_link">Echo & Alexa</p>
-        <p className="link sidebar_container_link">Fire Tv</p>
-        <p className="link sidebar_container_link">Kindle E-Reader & eBook</p>
-        <p className="link sidebar_container_link">Audible Audiobooks</p>
-        <p className="link sidebar_container_link">Amazon Prime Video</p>
-        <p className="link sidebar_container_link">Amazon Prime Music</p>
+        <p className="sidebar_container_link">Echo & Alexa</p>
+        <p className="sidebar_container_link">Fire Tv</p>
+        <p className="sidebar_container_link">Kindle E-Reader & eBook</p>
+        <p className="sidebar_container_link">Audible Audiobooks</p>
+        <p className="sidebar_container_link">Amazon Prime Video</p>
+        <p className="sidebar_container_link">Amazon Prime Music</p>
       </div>
 
       <div className="sidebar_container">
@@ -64,7 +64,7 @@ const ASide = () => {
         <Link to="/products/category=mobile&category=laptop">
           <p className="link sidebar_container_link">Mobiles, Computers</p>
         </Link>
-        <Link>
+        <Link to="/products/category=tv&category=appliances&category=electronics">
           <p className="link sidebar_container_link">
             TV, Appliances, Electronics
           </p>
@@ -75,31 +75,31 @@ const ASide = () => {
         <Link to="/products/category=womens%20clothing">
           <p className="link sidebar_container_link">Women's Fashion</p>
         </Link>
-        <Link>
+        <Link to="/products/category=home&category=kitchen&category=pets">
           <p className="link sidebar_container_link">Home, Kitchen, Pets</p>
         </Link>
-        <Link>
+        <Link to="/products/category=beauty&category=health&category=grocery">
           <p className="link sidebar_container_link">Beauty, Health, Grocery</p>
         </Link>
-        <Link>
+        <Link to="/products/category=sports&category=fitness&category=bags&category=luggage">
           <p className="link sidebar_container_link">
             Sports, Fitness, Bags, Luggage
           </p>
         </Link>
-        <Link>
+        <Link to="/products/category=toys&category=baby&category=kids">
           <p className="link sidebar_container_link">
             Toys, Baby products, Kid's Fashion
           </p>
         </Link>
-        <Link>
+        <Link to="/products/category=car&category=motorbike&category=industrials">
           <p className="link sidebar_container_link">
             Car, Motorbike, Industrial
           </p>
         </Link>
-        <Link>
+        <Link to="/products/category=books">
           <p className="link sidebar_container_link">Books</p>
         </Link>
-        <Link>
+        <Link to="/products/category=movie&category=music&category=video%20games">
           <p className="link sidebar_container_link">
             Movies, Music, & Video Games
           </p>

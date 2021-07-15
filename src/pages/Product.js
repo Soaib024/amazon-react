@@ -38,18 +38,19 @@ const Product = () => {
     });
   }, [id]);
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       {sidebarContext.sidebarVisible &&  <Sidebar></Sidebar>}
       <Header></Header>
       {error && <p>{error}</p>}
 
       {product && (
-        <div className="mx-52 my-24 flex h-screen">
-          <div className="p-12">
-            <img src={product.image} className="" alt="" />
+        <div className="flex w-screen justify-around flex-grow">
+          <div className="flex w-full max-w-4xl justify-center items-center space-x-12">
+          <div className="w-1/2">
+            <img src={product.image} className="w-2/3 max-h-96 object-contain" alt="" />
           </div>
 
-          <div className="p-12 space-y-9 ">
+          <div className="space-y-9 w-1/2 ">
             <p>{product.title}</p>
             <div className="flex">
           {Array(product.rating)
@@ -83,6 +84,7 @@ const Product = () => {
               eligendi qui numquam? Maxime nam animi aliquid, quibusdam quis
               illo fugit temporibus.
             </p>
+          </div>
           </div>
         </div>
       )}

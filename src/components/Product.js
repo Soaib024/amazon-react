@@ -74,7 +74,7 @@ const Product = ({ product }) => {
         {alreadyInCart() && (
           <div onClick={(e) => {
             e.stopPropagation();
-            history.push('/')
+            history.push('/cart')
           }} className="button mt-auto w-60 text-center mx-auto">
             Go to Card
           </div>

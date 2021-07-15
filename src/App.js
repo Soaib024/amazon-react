@@ -11,6 +11,8 @@ import { AuthProvider } from "./store/AuthProvider";
 import CartProvider from "./store/CartProvider";
 import SidebarProvider from "./store/SidebarProvider";
 import Product from "./pages/Product";
+import Order from "./pages/Order";
+
 
 const App = () => {
   return (
@@ -25,6 +27,7 @@ const App = () => {
             <Route path="/orders" exact component={orders}></Route>
             <Route path="/products/:query" exact component={Products}></Route>
             <Route path="/product/:id" exact component={Product}></Route>
+            <Route path="/order" exact component={Order}></Route>
           </SidebarProvider>
         </CartProvider>
       </AuthProvider>

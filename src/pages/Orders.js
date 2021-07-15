@@ -63,7 +63,7 @@ const Orders = () => {
           </div>
         )}
         {orders.length > 0 && <div>{page}</div>}
-        {orders.length == 0 && <div className="p-7 text-lg">No Orders to Show</div>}
+        {orders.length === 0 && <div className="p-7 text-lg">No Orders to Show</div>}
         {numPage > 0 && page < numPage && (
           <div onClick={nextPage} className="link">
             next
