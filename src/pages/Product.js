@@ -39,52 +39,58 @@ const Product = () => {
   }, [id]);
   return (
     <div className="h-screen flex flex-col">
-      {sidebarContext.sidebarVisible &&  <Sidebar></Sidebar>}
+      {sidebarContext.sidebarVisible && <Sidebar></Sidebar>}
       <Header></Header>
       {error && <p>{error}</p>}
 
       {product && (
-        <div className="flex w-screen justify-around flex-grow">
-          <div className="flex w-full max-w-4xl justify-center items-center space-x-12">
-          <div className="w-1/2">
-            <img src={product.image} className="w-2/3 max-h-96 object-contain" alt="" />
-          </div>
+        <div className="flex w-screen  justify-around flex-grow">
+          <div className="flex flex-col sm:flex-row w-full sm:max-w-4xl justify-center items-center sm:space-x-12">
+            <div className="sm:w-1/2">
+              <img
+                src={product.image}
+                className=" p-10 sm:w-2/3 sm:max-h-96 object-contain"
+                alt=""
+              />
+            </div>
 
-          <div className="space-y-9 w-1/2 ">
-            <p>{product.title}</p>
-            <div className="flex">
-          {Array(product.rating)
-            .fill()
-            .map((_, i) => (
-              <StarIcon key={i} className="h-5 text-yellow-500"></StarIcon>
-            ))}
-        
-        </div>
-            <p className="py-5">
-              {getSymbolFromCurrency("inr")} {product.price}
-            </p>
-            {!alreadyInCart() && (
-              <button
-                className=" button w-60 text-center mx-auto"
-                onClick={addToCart}
-              >
-                Add to Cart
-              </button>
-            )}
-            {alreadyInCart() && (
-              <Link to="/cart">
-                <button className="button w-60 text-center mx-auto">
-                  Go to Card
+            <div className="p-10 sm:space-y-9 sm:w-1/2 ">
+              <p>{product.title}</p>
+              <div className="flex">
+                {Array(product.rating)
+                  .fill()
+                  .map((_, i) => (
+                    <StarIcon
+                      key={i}
+                      className="h-5 text-yellow-500"
+                    ></StarIcon>
+                  ))}
+              </div>
+              <p className="py-5">
+                {getSymbolFromCurrency("inr")} {product.price}
+              </p>
+              {!alreadyInCart() && (
+                <button
+                  className=" button w-60 text-center mx-auto"
+                  onClick={addToCart}
+                >
+                  Add to Cart
                 </button>
-              </Link>
-            )}
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              pariatur in repellendus ad error quisquam quos dolorem, vitae,
-              eligendi qui numquam? Maxime nam animi aliquid, quibusdam quis
-              illo fugit temporibus.
-            </p>
-          </div>
+              )}
+              {alreadyInCart() && (
+                <Link to="/cart">
+                  <button className="button w-60 text-center mx-auto">
+                    Go to Card
+                  </button>
+                </Link>
+              )}
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae pariatur in repellendus ad error quisquam quos
+                dolorem, vitae, eligendi qui numquam? Maxime nam animi aliquid,
+                quibusdam quis illo fugit temporibus.
+              </p>
+            </div>
           </div>
         </div>
       )}

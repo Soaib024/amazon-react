@@ -2,12 +2,11 @@ import getSymbolFromCurrency from "currency-symbol-map";
 import { StarIcon } from "@heroicons/react/solid";
 import { useContext } from "react";
 import CartContext from "../store/CartContext";
-import { Link } from "react-router-dom";
 
 import hasPrime from '../images/hasPrime.png'
 import { useHistory } from 'react-router';
 
-const Product = ({ product }) => {
+const Product = ({ product, key }) => {
   const history = useHistory();
   const cartContext = useContext(CartContext);
   const addToCart = () => {
@@ -24,7 +23,7 @@ const Product = ({ product }) => {
 
   return (
  
-      <div className="relative flex flex-col m-5 bg-white z-30 p-10 rounded-md shadow-md h-144 items-center" onClick={() => history.push(`/product/${product._id}`)}>
+      <div className="relative flex flex-col m-5 bg-white z-30 p-10 rounded-md shadow-md h-144 items-center" onClick={() => history.push(`/product/${product._id}`)} key={key}>
         <p className="absolute top-2 right-2 text-xs italic text-gray-400 link" onClick={(e) => {e.stopPropagation(); history.push(`/products/category=${product.category}`)}}>
           {product.category}
         </p>
